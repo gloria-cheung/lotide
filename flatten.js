@@ -13,6 +13,7 @@ const eqArrays = function(arr1, arr2) {
       result = true;
     } else {
       result = false;
+      break;
     }
   }
   return result;
