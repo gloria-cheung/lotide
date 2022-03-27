@@ -12,7 +12,7 @@ const eqArrays = function(arr1, arr2) {
   for (let i = 0; i < arr1.length; i ++) {
     if (!(arr1[i] === arr2[i])) {
       return false;
-    } 
+    }
   }
   return true;
 };
@@ -60,6 +60,6 @@ const cd2 = {c: "1", d: ["2", 3, 4]};
 assertEqual(eqObjects(cd, cd2), false);
 assertEqual(eqObjects(cd2, cd), false);
 
-const cd3 = {c: "1", d: [1, "2", 3, 4]}
+const cd3 = {c: "1", d: [1, "2", 3, 4]};
 assertEqual(eqObjects(cd3, cd2), false);
 assertEqual(eqObjects(cd2, cd3), false);
