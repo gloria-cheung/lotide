@@ -7,16 +7,14 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 const eqArrays = function(arr1, arr2) {
-  let result = true;
+  if (arr1.length !== arr2.length) return false;
+
   for (let i = 0; i < arr1.length; i ++) {
-    if (arr1[i] === arr2[i]) {
-      result = true;
-    } else {
-      result = false;
-      break;
+    if (!(arr1[i] === arr2[i])) {
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
 const without = function(sourceArr, itemsToRemoveArr) {
@@ -30,13 +28,11 @@ const without = function(sourceArr, itemsToRemoveArr) {
 };
 
 // tests:
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-without(["hello", "world", "lighthouse"], ["lighthouse"]);
-
-
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+assertArraysEqual(without(["1", "2", "3", 4, 10, "hello"], [1, 2, "3", "abc", 44]), ["1", "2", 4, 10, "hello"]);
+assertArraysEqual(without(["1", "2", "3"], [1, "2", "3"]), ["1"]);
+assertArraysEqual(without([1, 2, "3"], [1, 2, "3"]), []);
 assertArraysEqual(without(["hello", "world", "lighthouse"], ["lighthouse"]), ["hello", "world"]);
 
 const words = ["hello", "world", "lighthouse"];

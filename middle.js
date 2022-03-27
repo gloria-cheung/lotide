@@ -7,16 +7,14 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 const eqArrays = function(arr1, arr2) {
-  let result = true;
+  if (arr1.length !== arr2.length) return false;
+
   for (let i = 0; i < arr1.length; i ++) {
-    if (arr1[i] === arr2[i]) {
-      result = true;
-    } else {
-      result = false;
-      break;
+    if (!(arr1[i] === arr2[i])) {
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
 const middle = function(arr) {
@@ -41,4 +39,7 @@ assertArraysEqual(middle([1, 2, 3]), [2]);
 assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
 assertArraysEqual(middle([1, 2]), []);
 assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle(["hello", "goodbye"]), []);
+assertArraysEqual(middle([1, "hello", "goodbye", 2]), ["hello", "goodbye"]);
+assertArraysEqual(middle([11, 2, 33, 10, "hello", 1, 5, 4]), [10, "hello"]);
 

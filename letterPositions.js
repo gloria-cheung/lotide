@@ -1,14 +1,12 @@
 const eqArrays = function(arr1, arr2) {
-  let result = true;
+  if (arr1.length !== arr2.length) return false;
+
   for (let i = 0; i < arr1.length; i ++) {
-    if (arr1[i] === arr2[i]) {
-      result = true;
-    } else {
-      result = false;
-      break;
+    if (!(arr1[i] === arr2[i])) {
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
 const assertArraysEqual = function(arr1, arr2) {
@@ -33,7 +31,7 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-
+// tests:
 assertArraysEqual(letterPositions("hello")["l"], [2, 3]);
 assertArraysEqual(letterPositions("i am a student")["a"], [2, 5]);
 assertArraysEqual(letterPositions("i like to code")["i"], [0, 3]);
