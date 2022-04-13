@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@gloriacheung/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "mini clone of lodash library - created for learning purposes at LHL",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/gloria-cheung/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gloria Cheung",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gloria-cheung/lotide/issues"
