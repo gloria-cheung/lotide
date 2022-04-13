@@ -35,3 +35,5 @@ The following functions are currently implemented:
 * `function flatten(...)`: returns single array with no nested inside
 * `function letterPositions(...)`: returns object showing index that each letter appears at
 * `function without(...)`: returns array without elements from second array
+* `function eqObjects(...)`: checks if 2 objects are equal
+* `function eqArrays(...)`: checks if 2 arrays are equal
