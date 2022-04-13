@@ -1,5 +1,5 @@
 const tail = require("../tail");
-const assert = require('chai').assert;
+const assert = require("chai").assert;
 
 describe("#tail", () => {
   it("returns ['my', 'name', 'is', 'Gloria'] for ['hello', 'my', 'name', 'is', 'Gloria']", () => {
